@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - ARG Flog</title>
+    <link rel="stylesheet" href="./css/styles-common.css">
+    <link rel="stylesheet" href="./css/styles-perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="site-logo">
+                    <span class="logo-text">ARG</span>
+                </div>
+                <h1 class="logo">ARG Flog</h1>
+            </div>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="perfil.html" class="active" aria-current="page">Perfil</a></li>
+                    <li><a href="cadastro.html">Nova Entrada</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Perfil do Usuário -->
+            <section class="profile-header" aria-labelledby="profile-title">
+                <div class="profile-avatar-container">
+                    <img src="../images/foto_andre_perfil.jpg" alt="Foto de perfil de André" class="profile-avatar">
+                </div>
+                <div class="profile-info">
+                    <h1 id="profile-title" class="profile-name">André</h1>
+                    <p class="profile-username">@andre_designer</p>
+                    <p class="profile-bio">Designer UI/UX | Especialista em Design de Interfaces e Experiência do Usuário</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">9</span>
+                            <span class="stat-label">Entradas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">187</span>
+                            <span class="stat-label">Curtidas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">32</span>
+                            <span class="stat-label">Comentários</span>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn btn-primary">Seguir</button>
+                        <button class="btn btn-outline">Mensagem</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Abas do Perfil -->
+            <div class="profile-tabs">
+                <button class="profile-tab active" data-tab="posts">Entradas</button>
+                <button class="profile-tab" data-tab="saved">Salvos</button>
+                <button class="profile-tab" data-tab="tagged">Marcados</button>
+            </div>
+
+            <!-- Entradas do Perfil -->
+            <div class="profile-content">
+                <!-- Grade de Entradas -->
+                <div class="profile-entries">
+                    <!-- Entrada 1 -->
+                    <div class="profile-entry">
+                        <img src="images/design-ui.jpg" alt="Criação da Paleta de Cores">
+                        <div class="profile-entry-overlay">
+                            <div class="profile-entry-stats">
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-heart"></i> 37
+                                </div>
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-comment"></i> 6
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entrada 2 -->
+                    <div class="profile-entry">
+                        <img src="images/form-validation.jpg" alt="Validação de Formulários">
+                        <div class="profile-entry-overlay">
+                            <div class="profile-entry-stats">
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-heart"></i> 25
+                                </div>
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-comment"></i> 4
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entrada 3 -->
+                    <div class="profile-entry">
+                        <img src="images/ux-research.jpg" alt="Pesquisa de Experiência do Usuário">
+                        <div class="profile-entry-overlay">
+                            <div class="profile-entry-stats">
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-heart"></i> 31
+                                </div>
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-comment"></i> 8
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entrada 4 -->
+                    <div class="profile-entry">
+                        <img src="images/wireframes.jpg" alt="Criação de Wireframes">
+                        <div class="profile-entry-overlay">
+                            <div class="profile-entry-stats">
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-heart"></i> 29
+                                </div>
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-comment"></i> 5
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entrada 5 -->
+                    <div class="profile-entry">
+                        <img src="images/color-theory.jpg" alt="Teoria das Cores">
+                        <div class="profile-entry-overlay">
+                            <div class="profile-entry-stats">
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-heart"></i> 22
+                                </div>
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-comment"></i> 3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entrada 6 -->
+                    <div class="profile-entry">
+                        <img src="images/typography.jpg" alt="Tipografia no Design">
+                        <div class="profile-entry-overlay">
+                            <div class="profile-entry-stats">
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-heart"></i> 19
+                                </div>
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-comment"></i> 2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entrada 7 -->
+                    <div class="profile-entry">
+                        <img src="images/responsive-design.jpg" alt="Design Responsivo">
+                        <div class="profile-entry-overlay">
+                            <div class="profile-entry-stats">
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-heart"></i> 15
+                                </div>
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-comment"></i> 1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entrada 8 -->
+                    <div class="profile-entry">
+                        <img src="images/accessibility.jpg" alt="Acessibilidade Web">
+                        <div class="profile-entry-overlay">
+                            <div class="profile-entry-stats">
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-heart"></i> 27
+                                </div>
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-comment"></i> 4
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entrada 9 -->
+                    <div class="profile-entry">
+                        <img src="images/design-system.jpg" alt="Sistema de Design">
+                        <div class="profile-entry-overlay">
+                            <div class="profile-entry-stats">
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-heart"></i> 33
+                                </div>
+                                <div class="profile-entry-stat">
+                                    <i class="fas fa-comment"></i> 7
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Sobre o ARG Flog</h3>
+                    <p>Um espaço para compartilhar o progresso e as experiências da nossa equipe durante o desenvolvimento de projetos.</p>
+                </div>
+                
+                <div class="footer-section links">
+                    <h3>Links Úteis</h3>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section team">
+                    <h3>Nossa Equipe</h3>
+                    <ul>
+                        <li><a href="perfil.html?user=ruan">Ruan</a></li>
+                        <li><a href="perfil.html?user=andre">André</a></li>
+                        <li><a href="perfil.html?user=igor">Igor</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARG Flog. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navegação Mobile -->
+    <nav class="mobile-nav">
+        <a href="index.html">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span class="sr-only">Início</span>
+        </a>
+        <a href="explorar.html">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="sr-only">Explorar</span>
+        </a>
+        <a href="cadastro.html">
+            <i class="fas fa-plus-square" aria-hidden="true"></i>
+            <span class="sr-only">Nova Entrada</span>
+        </a>
+        <a href="perfil.html" class="active" aria-current="page">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <span class="sr-only">Perfil</span>
+        </a>
+    </nav>
+</body>
+</html>

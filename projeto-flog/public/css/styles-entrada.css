@@ -1,0 +1,572 @@
+/* Estilos específicos para a página de entrada */
+
+/* Container principal */
+.entry-container {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Cabeçalho da entrada */
+.entry-header {
+    margin-bottom: 30px;
+}
+
+.entry-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.3;
+}
+
+.entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.entry-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.entry-meta i {
+    color: #0066cc;
+}
+
+/* Adicionando estilos para os links nos avatares */
+
+/* Autor da entrada */
+.entry-author {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Autor da entrada com link */
+.entry-author-link {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.entry-author-link:hover {
+    transform: scale(1.05);
+}
+
+.entry-author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.entry-author-info {
+    flex: 1;
+}
+
+.entry-author-name {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.entry-author-name a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.entry-author-name a:hover {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.entry-author-bio {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Imagem destacada */
+.entry-featured-image {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.entry-featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.entry-featured-image:hover img {
+    transform: scale(1.02);
+}
+
+/* Conteúdo da entrada */
+.entry-content {
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 40px;
+    font-size: 17px;
+}
+
+.entry-content p {
+    margin-bottom: 25px;
+}
+
+.entry-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 35px 0 20px;
+    color: #333;
+}
+
+.entry-content ul, .entry-content ol {
+    margin: 0 0 25px 20px;
+    padding-left: 20px;
+}
+
+.entry-content li {
+    margin-bottom: 10px;
+}
+
+.entry-content blockquote {
+    border-left: 4px solid #0066cc;
+    padding: 20px 30px;
+    margin: 30px 0;
+    background-color: #f8f9fa;
+    font-style: italic;
+    color: #555;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Paleta de cores */
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 25px 0 35px;
+}
+
+.color-item {
+    height: 100px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.color-item:hover {
+    transform: translateY(-5px);
+}
+
+.color-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    z-index: 1;
+}
+
+.color-name, .color-hex {
+    position: relative;
+    z-index: 2;
+}
+
+.color-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.color-hex {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+/* Ações da entrada */
+.entry-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
+}
+
+.entry-likes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.like-button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.like-button:hover {
+    color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+    transform: scale(1.1);
+}
+
+.entry-likes span {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.entry-share {
+    display: flex;
+    gap: 15px;
+}
+
+.entry-share a {
+    color: #666;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry-share a:hover {
+    transform: translateY(-3px);
+}
+
+.entry-share a:nth-child(1):hover {
+    color: #3b5998;
+    background-color: rgba(59, 89, 152, 0.1);
+}
+
+.entry-share a:nth-child(2):hover {
+    color: #1da1f2;
+    background-color: rgba(29, 161, 242, 0.1);
+}
+
+.entry-share a:nth-child(3):hover {
+    color: #0077b5;
+    background-color: rgba(0, 119, 181, 0.1);
+}
+
+.entry-share a:nth-child(4):hover {
+    color: #333;
+    background-color: rgba(51, 51, 51, 0.1);
+}
+
+/* Comentários */
+.entry-comments {
+    margin-top: 40px;
+}
+
+.comments-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.comment {
+    display: flex;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+/* Comentários com links */
+.comment-avatar-link {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.comment-avatar-link:hover {
+    transform: scale(1.05);
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-author {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.comment-author a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.comment-author a:hover {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.comment-date {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.comment-text {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Formulário de comentário */
+.comment-form {
+    margin-top: 30px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.comment-form h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    min-height: 120px;
+    margin-bottom: 15px;
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment-form textarea:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+
+.comment-form button {
+    padding: 12px 25px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.comment-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
+}
+
+/* Entradas relacionadas */
+.related-entries {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.related-entries h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.related-entries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.related-entry {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Entradas relacionadas com links */
+.related-entry a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.related-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.related-entry-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.related-entry-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.related-entry:hover .related-entry-image img {
+    transform: scale(1.08);
+}
+
+.related-entry-content {
+    padding: 20px;
+}
+
+.related-entry-title {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.related-entry-meta {
+    color: #888;
+    font-size: 13px;
+}
+
+.related-entry-meta .author a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.related-entry-meta .author a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para a página de entrada */
+@media (max-width: 992px) {
+    .entry-container {
+        padding: 30px;
+    }
+    
+    .entry-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .entry-container {
+        padding: 25px;
+    }
+    
+    .entry-title {
+        font-size: 24px;
+    }
+    
+    .entry-content {
+        font-size: 16px;
+    }
+    
+    .related-entries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .entry-meta {
+        gap: 15px;
+        font-size: 14px;
+    }
+    
+    .comment {
+        flex-direction: column;
+    }
+    
+    .comment-avatar {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .entry-container {
+        padding: 20px;
+        border-radius: 0;
+        margin: -30px -20px 30px;
+    }
+    
+    .entry-title {
+        font-size: 22px;
+    }
+    
+    .entry-author {
+        padding: 12px;
+    }
+    
+    .entry-author-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .related-entries-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .entry-actions {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .color-palette {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .comment-form {
+        padding: 20px;
+    }
+}

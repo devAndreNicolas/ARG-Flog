@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARG Flog</title>
+    <link rel="stylesheet" href="./css/styles-common.css">
+    <link rel="stylesheet" href="./css/styles-index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="site-logo">
+                    <span class="logo-text">ARG</span>
+                </div>
+                <h1 class="logo">ARG Flog</h1>
+            </div>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html" class="active" aria-current="page">Início</a></li>
+                    <li><a href="perfil.html">Perfil</a></li>
+                    <li><a href="cadastro.html">Nova Entrada</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="container main-container">
+            <!-- Coluna Principal de Entradas -->
+            <div class="feed-column">
+                <!-- Filtros -->
+                <div class="feed-filters">
+                    <h2>Últimas Entradas</h2>
+                    <div class="filters" role="group" aria-label="Filtros de entradas">
+                        <div class="filter-group">
+                            <label for="filter-author">Filtrar por:</label>
+                            <select id="filter-author" aria-label="Selecione um integrante para filtrar">
+                                <option value="">Todos os integrantes</option>
+                                <option value="ruan">Ruan</option>
+                                <option value="andre">André</option>
+                                <option value="igor">Igor</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="sort-by">Ordenar por:</label>
+                            <select id="sort-by" aria-label="Selecione como ordenar as entradas">
+                                <option value="date-desc">Mais recentes</option>
+                                <option value="date-asc">Mais antigas</option>
+                                <option value="likes">Mais curtidas</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de Entradas Estilo Feed -->
+                <div class="feed-entries" role="feed" aria-label="Feed de entradas">
+                    <!-- Entrada 1 -->
+                    <article class="feed-card">
+                        <header class="feed-card-header">
+                            <div class="author-info">
+                                <img href="./ruan-perfil.html" src="images/ruan-avatar.jpg" alt="Avatar de Ruan" class="author-avatar">
+                                <div>
+                                    <h3 class="author-name">Ruan</h3>
+                                    <span class="post-date">10/03/2025</span>
+                                </div>
+                            </div>
+                            <button class="options-btn" aria-label="Mais opções">
+                                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
+                            </button>
+                        </header>
+                        
+                        <div class="feed-image-container">
+                            <img src="images/css-grid.jpg" alt="Implementação do CSS Grid" class="feed-image">
+                        </div>
+                        
+                        <div class="feed-card-content">
+                            <div class="feed-actions">
+                                <div class="action-buttons">
+                                    <button class="action-btn like-btn" aria-label="Curtir">
+                                        <i class="far fa-heart" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="action-btn comment-btn" aria-label="Comentar">
+                                        <i class="far fa-comment" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="action-btn share-btn" aria-label="Compartilhar">
+                                        <i class="far fa-paper-plane" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <button class="action-btn save-btn" aria-label="Salvar">
+                                    <i class="far fa-bookmark" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="feed-likes">
+                                <span>42 curtidas</span>
+                            </div>
+                            
+                            <h2 class="feed-title">Implementação do CSS Grid</h2>
+                            
+                            <p class="feed-excerpt">
+                                Hoje trabalhei na estilização da página principal utilizando CSS Grid para organizar os elementos. Consegui criar um layout responsivo que se adapta a diferentes tamanhos de tela.
+                            </p>
+                            
+                            <div class="feed-comments">
+                                <p><strong>André:</strong> Ficou muito bom! Adorei as cores.</p>
+                                <p><strong>Igor:</strong> Parabéns pelo trabalho!</p>
+                                <a href="#" class="view-comments">Ver todos os 8 comentários</a>
+                            </div>
+                            
+                            <a href="entrada.html?id=1" class="btn-read-more">Ver Entrada Completa</a>
+                            
+                            <div class="add-comment">
+                                <input type="text" placeholder="Adicione um comentário..." aria-label="Adicione um comentário">
+                                <button type="button">Publicar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Entrada 2 -->
+                    <article class="feed-card">
+                        <header class="feed-card-header">
+                            <div class="author-info">
+                                <img href="./andre-perfil.html" src="../images/foto_andre_perfil.jpg" alt="Avatar de André" class="author-avatar">
+                                <div>
+                                    <h3 class="author-name">André</h3>
+                                    <span class="post-date">09/03/2025</span>
+                                </div>
+                            </div>
+                            <button class="options-btn" aria-label="Mais opções">
+                                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
+                            </button>
+                        </header>
+                        
+                        <div class="feed-image-container">
+                            <img src="images/design-ui.jpg" alt="Design da Interface" class="feed-image">
+                        </div>
+                        
+                        <div class="feed-card-content">
+                            <div class="feed-actions">
+                                <div class="action-buttons">
+                                    <button class="action-btn like-btn" aria-label="Curtir">
+                                        <i class="far fa-heart" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="action-btn comment-btn" aria-label="Comentar">
+                                        <i class="far fa-comment" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="action-btn share-btn" aria-label="Compartilhar">
+                                        <i class="far fa-paper-plane" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <button class="action-btn save-btn" aria-label="Salvar">
+                                    <i class="far fa-bookmark" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="feed-likes">
+                                <span>37 curtidas</span>
+                            </div>
+                            
+                            <h2 class="feed-title">Criação da Paleta de Cores</h2>
+                            
+                            <p class="feed-excerpt">
+                                Finalizei a paleta de cores do nosso projeto. Optei por tons que transmitem modernidade e profissionalismo, mantendo a interface agradável e intuitiva.
+                            </p>
+                            
+                            <div class="feed-comments">
+                                <p><strong>Igor:</strong> Adorei! Especialmente o contraste entre as cores.</p>
+                                <p><strong>Ruan:</strong> Vai ficar perfeito com o código que estou desenvolvendo!</p>
+                                <a href="#" class="view-comments">Ver todos os 6 comentários</a>
+                            </div>
+                            
+                            <a href="entrada.html?id=2" class="btn-read-more">Ver Entrada Completa</a>
+                            
+                            <div class="add-comment">
+                                <input type="text" placeholder="Adicione um comentário..." aria-label="Adicione um comentário">
+                                <button type="button">Publicar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Entrada 3 -->
+                    <article class="feed-card">
+                        <header class="feed-card-header">
+                            <div class="author-info">
+                                <img href="./igor-perfil.html" src="images/igor-avatar.jpg" alt="Avatar de Igor" class="author-avatar">
+                                <div>
+                                    <h3 class="author-name">Igor</h3>
+                                    <span class="post-date">08/03/2025</span>
+                                </div>
+                            </div>
+                            <button class="options-btn" aria-label="Mais opções">
+                                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
+                            </button>
+                        </header>
+                        
+                        <div class="feed-image-container">
+                            <img src="images/database.jpg" alt="Modelagem de Banco de Dados" class="feed-image">
+                        </div>
+                        
+                        <div class="feed-card-content">
+                            <div class="feed-actions">
+                                <div class="action-buttons">
+                                    <button class="action-btn like-btn" aria-label="Curtir">
+                                        <i class="far fa-heart" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="action-btn comment-btn" aria-label="Comentar">
+                                        <i class="far fa-comment" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="action-btn share-btn" aria-label="Compartilhar">
+                                        <i class="far fa-paper-plane" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <button class="action-btn save-btn" aria-label="Salvar">
+                                    <i class="far fa-bookmark" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="feed-likes">
+                                <span>29 curtidas</span>
+                            </div>
+                            
+                            <h2 class="feed-title">Modelagem do Banco de Dados</h2>
+                            
+                            <p class="feed-excerpt">
+                                Finalizei o diagrama ER do banco de dados que irá armazenar as entradas e informações dos usuários. A estrutura está otimizada para consultas rápidas.
+                            </p>
+                            
+                            <div class="feed-comments">
+                                <p><strong>Ruan:</strong> Excelente trabalho! Vai facilitar muito a integração.</p>
+                                <p><strong>André:</strong> Muito organizado, parabéns!</p>
+                                <a href="#" class="view-comments">Ver todos os 5 comentários</a>
+                            </div>
+                            
+                            <a href="entrada.html?id=3" class="btn-read-more">Ver Entrada Completa</a>
+                            
+                            <div class="add-comment">
+                                <input type="text" placeholder="Adicione um comentário..." aria-label="Adicione um comentário">
+                                <button type="button">Publicar</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Paginação -->
+                <nav class="pagination" aria-label="Navegação de páginas">
+                    <a href="#" class="active" aria-current="page">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#" class="next">Próxima <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                </nav>
+            </div>
+
+            <!-- Barra Lateral -->
+            <aside class="sidebar">
+                <!-- Perfil do Usuário -->
+                <div class="sidebar-profile">
+                    <img src="images/seu-avatar.jpg" alt="Seu perfil" class="sidebar-avatar">
+                    <div class="sidebar-user-info">
+                        <h3>Seu Nome</h3>
+                        <p>@seu_usuario</p>
+                    </div>
+                    <a href="perfil.html" class="sidebar-link">Ver perfil</a>
+                </div>
+
+                <!-- Sugestões -->
+                <div class="sidebar-section">
+                    <div class="sidebar-header">
+                        <h3>Sugestões para você</h3>
+                        <a href="#" class="sidebar-link">Ver tudo</a>
+                    </div>
+                    
+                    <div class="suggestions-list">
+                        <div class="suggestion-item">
+                            <img src="images/user1.jpg" alt="Usuário 1" class="suggestion-avatar">
+                            <div class="suggestion-info">
+                                <h4>user1</h4>
+                                <p>Novo no ARG Flog</p>
+                            </div>
+                            <a href="#" class="follow-btn">Seguir</a>
+                        </div>
+                        
+                        <div class="suggestion-item">
+                            <img src="images/user2.jpg" alt="Usuário 2" class="suggestion-avatar">
+                            <div class="suggestion-info">
+                                <h4>user2</h4>
+                                <p>Seguido por Ruan</p>
+                            </div>
+                            <a href="#" class="follow-btn">Seguir</a>
+                        </div>
+                        
+                        <div class="suggestion-item">
+                            <img src="images/user3.jpg" alt="Usuário 3" class="suggestion-avatar">
+                            <div class="suggestion-info">
+                                <h4>user3</h4>
+                                <p>Seguido por André</p>
+                            </div>
+                            <a href="#" class="follow-btn">Seguir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Links do Rodapé -->
+                <div class="sidebar-footer">
+                    <nav class="footer-links">
+                        <a href="#">Sobre</a> &bull;
+                        <a href="#">Ajuda</a> &bull;
+                        <a href="#">Privacidade</a> &bull;
+                        <a href="#">Termos</a>
+                    </nav>
+                    <p class="copyright">&copy; 2025 ARG Flog</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Rodapé (visível apenas em telas menores) -->
+    <footer class="footer mobile-only">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Sobre o ARG Flog</h3>
+                    <p>Um espaço para compartilhar o progresso e as experiências da nossa equipe durante o desenvolvimento de projetos.</p>
+                </div>
+                
+                <div class="footer-section links">
+                    <h3>Links Úteis</h3>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section team">
+                    <h3>Nossa Equipe</h3>
+                    <ul>
+                        <li><a href="perfil.html?user=ruan">Ruan</a></li>
+                        <li><a href="perfil.html?user=andre">André</a></li>
+                        <li><a href="perfil.html?user=igor">Igor</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARG Flog. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navegação Mobile -->
+    <nav class="mobile-nav">
+        <a href="index.html" class="active" aria-current="page">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span class="sr-only">Início</span>
+        </a>
+        <a href="explorar.html">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="sr-only">Explorar</span>
+        </a>
+        <a href="cadastro.html">
+            <i class="fas fa-plus-square" aria-hidden="true"></i>
+            <span class="sr-only">Nova Entrada</span>
+        </a>
+        <a href="perfil.html">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <span class="sr-only">Perfil</span>
+        </a>
+    </nav>
+</body>
+</html>

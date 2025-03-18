@@ -1,0 +1,344 @@
+/* Estilos específicos para a página de cadastro */
+
+/* Container do formulário */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos do formulário */
+.entry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-control:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+textarea.form-control {
+    min-height: 200px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.form-hint {
+    color: #666;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.form-error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Upload de imagem */
+.image-upload {
+    margin-bottom: 0;
+}
+
+.image-upload-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+}
+
+.image-upload-preview {
+    width: 100%;
+    height: 250px;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.image-upload-preview:hover {
+    border-color: #0066cc;
+    background-color: #f0f7ff;
+}
+
+.image-upload-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.image-upload-placeholder {
+    color: #666;
+    text-align: center;
+    padding: 20px;
+}
+
+.image-upload-placeholder i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    display: block;
+    color: #999;
+}
+
+.image-upload-input {
+    display: none;
+}
+
+.image-upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+.image-upload-button:hover {
+    background-color: #e5e5e5;
+    border-color: #ccc;
+}
+
+/* Tags */
+.tags-input {
+    margin-bottom: 0;
+}
+
+.tags-input-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+}
+
+.tags-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-height: 50px;
+    align-items: center;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.tags-input-container:focus-within {
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e5f1ff;
+    color: #0066cc;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background-color: #d0e5ff;
+}
+
+.tag-remove {
+    background: none;
+    border: none;
+    color: #0066cc;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0 5px;
+    transition: all 0.2s ease;
+}
+
+.tag-remove:hover {
+    color: #004080;
+    transform: scale(1.2);
+}
+
+.tags-input-field {
+    flex: 1;
+    min-width: 120px;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+/* Checkbox */
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.form-check input {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: #0066cc;
+}
+
+.form-check label {
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Ações do formulário */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.form-actions .btn {
+    padding: 12px 25px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    flex: 1;
+}
+
+.form-actions .btn-primary {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+}
+
+.form-actions .btn-primary:hover {
+    background-color: #0055aa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
+}
+
+.form-actions .btn-outline {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.form-actions .btn-outline:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para a página de cadastro */
+@media (max-width: 992px) {
+    .form-container {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 25px;
+    }
+    
+    .form-title {
+        font-size: 24px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-container {
+        padding: 20px;
+        border-radius: 0;
+        margin: -30px -20px 30px;
+    }
+    
+    .image-upload-preview {
+        height: 200px;
+    }
+    
+    .entry-form {
+        gap: 20px;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
