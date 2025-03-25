@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Entrada - ARG Flog</title>
+    <link rel="stylesheet" href="./css/styles-common.css">
+    <link rel="stylesheet" href="./css/styles-cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="site-logo">
+                    <span class="logo-text">ARG</span>
+                </div>
+                <h1 class="logo">ARG Flog</h1>
+            </div>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="perfil.html">Perfil</a></li>
+                    <li><a href="cadastro.html" class="active" aria-current="page">Nova Entrada</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="form-container">
+                <h1 class="form-title">Criar Nova Entrada</h1>
+                
+                <form class="entry-form">
+                    <div class="form-group">
+                        <label for="entry-title">Título da Entrada</label>
+                        <input type="text" id="entry-title" class="form-control" placeholder="Digite o título da sua entrada" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="entry-category">Categoria</label>
+                        <select id="entry-category" class="form-control" required>
+                            <option value="">Selecione uma categoria</option>
+                            <option value="desenvolvimento">Desenvolvimento</option>
+                            <option value="design">Design</option>
+                            <option value="banco-de-dados">Banco de Dados</option>
+                            <option value="frontend">Frontend</option>
+                            <option value="backend">Backend</option>
+                            <option value="ui-ux">UI/UX</option>
+                        </select>
+                    </div>
+                    
+                    <div class="image-upload">
+                        <label class="image-upload-label">Imagem de Capa</label>
+                        <div class="image-upload-preview" id="image-preview">
+                            <div class="image-upload-placeholder">
+                                <i class="fas fa-image"></i>
+                                <p>Clique para selecionar uma imagem</p>
+                            </div>
+                        </div>
+                        <input type="file" id="image-upload" class="image-upload-input" accept="image/*">
+                        <label for="image-upload" class="image-upload-button">Escolher Imagem</label>
+                        <p class="form-hint">Tamanho recomendado: 1200 x 800 pixels. Formatos: JPG, PNG.</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="entry-content">Conteúdo</label>
+                        <textarea id="entry-content" class="form-control" rows="10" placeholder="Escreva o conteúdo da sua entrada..." required></textarea>
+                    </div>
+                    
+                    <div class="tags-input">
+                        <label class="tags-input-label">Tags</label>
+                        <div class="tags-input-container" id="tags-container">
+                            <input type="text" class="tags-input-field" id="tags-input" placeholder="Digite tags e pressione Enter">
+                        </div>
+                        <p class="form-hint">Separe as tags com a tecla Enter. Máximo de 5 tags.</p>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input type="checkbox" id="allow-comments" checked>
+                        <label for="allow-comments">Permitir comentários</label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline">Salvar como Rascunho</button>
+                        <button type="submit" class="btn btn-primary">Publicar Entrada</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Sobre o ARG Flog</h3>
+                    <p>Um espaço para compartilhar o progresso e as experiências da nossa equipe durante o desenvolvimento de projetos.</p>
+                </div>
+                
+                <div class="footer-section links">
+                    <h3>Links Úteis</h3>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section team">
+                    <h3>Nossa Equipe</h3>
+                    <ul>
+                        <li><a href="perfil.html?user=ruan">Ruan</a></li>
+                        <li><a href="perfil.html?user=andre">André</a></li>
+                        <li><a href="perfil.html?user=igor">Igor</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARG Flog. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navegação Mobile -->
+    <nav class="mobile-nav">
+        <a href="index.html">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span class="sr-only">Início</span>
+        </a>
+        <a href="explorar.html">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="sr-only">Explorar</span>
+        </a>
+        <a href="cadastro.html" class="active" aria-current="page">
+            <i class="fas fa-plus-square" aria-hidden="true"></i>
+            <span class="sr-only">Nova Entrada</span>
+        </a>
+        <a href="perfil.html">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <span class="sr-only">Perfil</span>
+        </a>
+    </nav>
+</body>
+</html>
