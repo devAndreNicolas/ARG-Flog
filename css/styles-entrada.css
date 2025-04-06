@@ -406,89 +406,6 @@
     box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
 }
 
-/* Entradas relacionadas */
-.related-entries {
-    margin-top: 60px;
-    margin-bottom: 40px;
-}
-
-.related-entries h2 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: #333;
-}
-
-.related-entries-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.related-entry {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Entradas relacionadas com links */
-.related-entry a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    height: 100%;
-}
-
-.related-entry:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
-
-.related-entry-image {
-    height: 180px;
-    overflow: hidden;
-}
-
-.related-entry-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.related-entry:hover .related-entry-image img {
-    transform: scale(1.08);
-}
-
-.related-entry-content {
-    padding: 20px;
-}
-
-.related-entry-title {
-    font-size: 17px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333;
-    line-height: 1.4;
-}
-
-.related-entry-meta {
-    color: #888;
-    font-size: 13px;
-}
-
-.related-entry-meta .author a {
-    color: #0066cc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.related-entry-meta .author a:hover {
-    text-decoration: underline;
-}
-
 /* Responsividade para a página de entrada */
 @media (max-width: 992px) {
     .entry-container {
@@ -511,10 +428,6 @@
     
     .entry-content {
         font-size: 16px;
-    }
-    
-    .related-entries-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
     
     .entry-meta {
@@ -549,11 +462,6 @@
     .entry-author-avatar {
         width: 50px;
         height: 50px;
-    }
-    
-    .related-entries-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
     }
     
     .entry-actions {

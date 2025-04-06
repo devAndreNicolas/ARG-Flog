@@ -21,7 +21,7 @@
             <nav class="main-nav" aria-label="Navegação principal">
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="perfil.html">Perfil</a></li>
+                    <li><a href="andre-perfil.html">Perfil</a></li>
                     <li><a href="cadastro.html">Nova Entrada</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                 </ul>
@@ -56,130 +56,40 @@
                 </div>
 
                 <div class="entry-content">
-                    <p>Hoje quero compartilhar minha experiência com CSS Grid Layout, uma das ferramentas mais poderosas para criação de layouts modernos e responsivos na web. Implementei recentemente um sistema de grid para nosso projeto e os resultados foram excelentes.</p>
+                    <p>O CSS Grid Layout é uma das ferramentas mais poderosas para criar layouts modernos e responsivos na web. Ele permite organizar elementos em linhas e colunas, oferecendo controle total sobre o posicionamento e o alinhamento dos itens.</p>
                     
-                    <h2>Por que CSS Grid?</h2>
+                    <h2>Por que usar CSS Grid?</h2>
                     
-                    <p>Antes de adotar o CSS Grid, estávamos usando uma combinação de Flexbox e técnicas mais antigas. Embora o Flexbox seja excelente para layouts unidimensionais, encontramos limitações ao trabalhar com layouts complexos em duas dimensões. O CSS Grid nos oferece:</p>
-                    
+                    <p>O CSS Grid é ideal para layouts bidimensionais, onde você precisa organizar elementos tanto horizontal quanto verticalmente. Ele simplifica a criação de designs complexos e reduz a quantidade de código necessária.</p>
+
+                    <h2>Como funciona?</h2>
+
+                    <p>Com o CSS Grid, você pode dividir o espaço em áreas específicas, chamadas de "grid areas". Cada área pode ser atribuída a um elemento, permitindo que você crie layouts organizados e flexíveis. Além disso, o CSS Grid se adapta automaticamente a diferentes tamanhos de tela, tornando-o perfeito para designs responsivos.</p>
+
+                    <h2>Exemplos práticos</h2>
+
+                    <p>Imagine um layout com um cabeçalho, uma barra lateral e um conteúdo principal. Em telas maiores, o cabeçalho pode ocupar toda a largura, enquanto a barra lateral e o conteúdo principal são exibidos lado a lado. Em dispositivos menores, os elementos podem ser reorganizados para ocupar toda a largura da tela, garantindo uma experiência consistente para o usuário.</p>
+
+                    <h2>Vantagens do CSS Grid</h2>
+
                     <ul>
-                        <li>Controle preciso sobre linhas e colunas</li>
-                        <li>Capacidade de criar layouts complexos com menos código</li>
-                        <li>Melhor alinhamento de elementos em ambas as direções</li>
                         <li>Facilidade para criar layouts responsivos</li>
-                        <li>Suporte nativo para áreas nomeadas</li>
+                        <li>Controle preciso sobre linhas e colunas</li>
+                        <li>Redução significativa na quantidade de código CSS</li>
+                        <li>Melhor organização e manutenção do design</li>
                     </ul>
-                    
-                    <h2>Implementação Básica</h2>
-                    
-                    <p>A implementação básica do CSS Grid é surpreendentemente simples. Aqui está um exemplo do código que utilizei para criar o layout principal:</p>
-                    
-                    <pre><code>.grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 20px;
-}
 
-.header {
-  grid-column: 1 / -1;
-}
-
-.sidebar {
-  grid-column: 1 / span 3;
-}
-
-.main-content {
-  grid-column: 4 / -1;
-}
-
-@media (max-width: 768px) {
-  .sidebar,
-  .main-content {
-    grid-column: 1 / -1;
-  }
-}</code></pre>
-                    
-                    <p>Este código cria um grid de 12 colunas com espaçamento de 20px entre os elementos. O cabeçalho ocupa toda a largura, a barra lateral ocupa 3 colunas, e o conteúdo principal ocupa o restante. Em telas menores, tanto a barra lateral quanto o conteúdo principal ocupam a largura total.</p>
-                    
-                    <h2>Recursos Avançados</h2>
-                    
-                    <p>Além do básico, explorei alguns recursos avançados do CSS Grid que trouxeram grande flexibilidade ao nosso layout:</p>
-                    
-                    <h3>Grid Areas</h3>
-                    
-                    <p>Utilizei grid-template-areas para criar layouts mais complexos com áreas nomeadas:</p>
-                    
-                    <pre><code>.grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto 1fr auto;
-  grid-template-areas:
-    "header header header header header header header header header header header header"
-    "nav    nav    nav    nav    nav    nav    nav    nav    nav    nav    nav    nav"
-    "sidebar content content content content content content content content content content content"
-    "footer footer footer footer footer footer footer footer footer footer footer footer";
-  min-height: 100vh;
-}
-
-.header { grid-area: header; }
-.nav { grid-area: nav; }
-.sidebar { grid-area: sidebar; }
-.content { grid-area: content; }
-.footer { grid-area: footer; }</code></pre>
-                    
-                    <h3>Auto-Fill e Auto-Fit</h3>
-                    
-                    <p>Para criar layouts responsivos que se adaptam automaticamente ao número de itens, utilizei as funções auto-fill e auto-fit:</p>
-                    
-                    <pre><code>.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 20px;
-}</code></pre>
-                    
-                    <p>Isso cria uma galeria onde cada item tem no mínimo 250px de largura, e o número de colunas se ajusta automaticamente conforme o espaço disponível.</p>
-                    
                     <blockquote>
-                        "CSS Grid é como ter um superpoder para layouts web. Uma vez que você domina os conceitos básicos, é difícil imaginar como conseguíamos criar layouts complexos sem ele."
+                        "O CSS Grid é como um superpoder para desenvolvedores web. Ele transforma a maneira como criamos layouts, tornando o processo mais rápido e eficiente."
                     </blockquote>
-                    
-                    <h2>Compatibilidade e Fallbacks</h2>
-                    
-                    <p>Embora o suporte ao CSS Grid seja excelente nos navegadores modernos, implementei fallbacks para garantir uma boa experiência em navegadores mais antigos:</p>
-                    
-                    <pre><code>/* Fallback para navegadores que não suportam Grid */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.item {
-  width: 100%;
-}
+                    <h2>Compatibilidade</h2>
 
-@supports (display: grid) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-  
-  .item {
-    width: auto;
-  }
-}</code></pre>
-                    
-                    <h2>Resultados e Próximos Passos</h2>
-                    
-                    <p>A implementação do CSS Grid nos permitiu:</p>
-                    
-                    <ul>
-                        <li>Reduzir significativamente a quantidade de código CSS</li>
-                        <li>Criar layouts mais complexos e dinâmicos</li>
-                        <li>Melhorar a responsividade em diferentes dispositivos</li>
-                        <li>Facilitar a manutenção e evolução do design</li>
-                    </ul>
-                    
-                    <p>Nos próximos dias, pretendo explorar ainda mais as possibilidades do CSS Grid, especialmente em combinação com outras tecnologias modernas como CSS Custom Properties e animações baseadas em grid.</p>
+                    <p>O CSS Grid é amplamente suportado pelos navegadores modernos. No entanto, é sempre importante verificar a compatibilidade para garantir que todos os usuários tenham uma boa experiência. Para navegadores mais antigos, você pode usar técnicas alternativas, como Flexbox.</p>
+
+                    <h2>Conclusão</h2>
+
+                    <p>Se você ainda não experimentou o CSS Grid, recomendo começar com layouts simples e explorar gradualmente os recursos mais avançados. Ele é uma ferramenta indispensável para qualquer desenvolvedor que deseja criar designs modernos e responsivos.</p>
                 </div>
 
                 <div class="entry-actions">
@@ -215,40 +125,7 @@
                         <div class="comment-content">
                             <h3 class="comment-author"><a href="andre-perfil.html">André</a></h3>
                             <p class="comment-date">10 de Março, 2025 às 14:20</p>
-                            <p class="comment-text">Excelente artigo, Ruan! Isso vai ajudar muito na implementação dos layouts que desenhei. Especialmente a parte de grid areas vai facilitar bastante.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="comment">
-                        <a href="igor-perfil.html" class="comment-avatar-link">
-                            <img src="https://scontent.frec10-1.fna.fbcdn.net/v/t39.30808-6/485358360_1879049962855556_4309794227087490675_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=4TxexKGb_F4Q7kNvgFdypJc&_nc_oc=AdmqoBhnlNGJPo7ZOZxbRpvoYlXYOte9lw320Sm5u__u2Z1n071UeKdRYHSuVh59MB8&_nc_zt=23&_nc_ht=scontent.frec10-1.fna&_nc_gid=A2imsznAoeqCd-8Vxnw9Xg&oh=00_AYFDwts0GY60ksZezKUGF7nSy3chV2xh5yG9NcNGd_EuOw&oe=67EB9364" alt="Avatar de Igor" class="comment-avatar">
-                        </a>
-                        <div class="comment-content">
-                            <h3 class="comment-author"><a href="igor-perfil.html">Igor</a></h3>
-                            <p class="comment-date">10 de Março, 2025 às 15:05</p>
-                            <p class="comment-text">Muito bom! Você considerou usar CSS Grid para o layout do painel administrativo também? Acho que seria perfeito para aquela interface.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="comment">
-                        <a href="#" class="comment-avatar-link">
-                            <img src="images/user1.png" alt="Avatar de Usuário 5" class="comment-avatar">
-                        </a>
-                        <div class="comment-content">
-                            <h3 class="comment-author"><a href="#">Marina</a></h3>
-                            <p class="comment-date">10 de Março, 2025 às 16:30</p>
-                            <p class="comment-text">Ótima explicação! Você tem alguma dica para quem está começando com CSS Grid agora?</p>
-                        </div>
-                    </div>
-                    
-                    <div class="comment">
-                        <a href="#" class="comment-avatar-link">
-                            <img src="images/user2.png" alt="Avatar de Usuário 6" class="comment-avatar">
-                        </a>
-                        <div class="comment-content">
-                            <h3 class="comment-author"><a href="#">Lucas</a></h3>
-                            <p class="comment-date">11 de Março, 2025 às 09:15</p>
-                            <p class="comment-text">Excelente artigo! Você já experimentou combinar CSS Grid com Subgrid? Parece promissor para layouts ainda mais complexos.</p>
+                            <p class="comment-text">Excelente artigo, Ruan! Isso vai ajudar muito na implementação dos layouts que desenhei.</p>
                         </div>
                     </div>
                     
@@ -259,111 +136,14 @@
                     </form>
                 </section>
             </article>
-
-            <section class="related-entries">
-                <h2>Entradas Relacionadas</h2>
-                <div class="related-entries-grid">
-                    <article class="related-entry">
-                        <a href="entrada-flexbox.html">
-                            <div class="related-entry-image">
-                                <img src="images/flexbox.jpg" alt="CSS Flexbox">
-                            </div>
-                            <div class="related-entry-content">
-                                <h3 class="related-entry-title">Dominando CSS Flexbox</h3>
-                                <p class="related-entry-meta">
-                                    <span class="author"><a href="ruan-perfil.html">Ruan</a></span> • 
-                                    <span class="date">01/03/2025</span>
-                                </p>
-                            </div>
-                        </a>
-                    </article>
-                    
-                    <article class="related-entry">
-                        <a href="entrada-responsive.html">
-                            <div class="related-entry-image">
-                                <img src="images/responsive-design.jpg" alt="Design Responsivo">
-                            </div>
-                            <div class="related-entry-content">
-                                <h3 class="related-entry-title">Técnicas de Design Responsivo</h3>
-                                <p class="related-entry-meta">
-                                    <span class="author"><a href="andre-perfil.html">André</a></span> • 
-                                    <span class="date">28/02/2025</span>
-                                </p>
-                            </div>
-                        </a>
-                    </article>
-                    
-                    <article class="related-entry">
-                        <a href="entrada-css-variables.html">
-                            <div class="related-entry-image">
-                                <img src="images/css-variables.jpg" alt="CSS Variables">
-                            </div>
-                            <div class="related-entry-content">
-                                <h3 class="related-entry-title">CSS Variables: Uso Prático</h3>
-                                <p class="related-entry-meta">
-                                    <span class="author"><a href="ruan-perfil.html">Ruan</a></span> • 
-                                    <span class="date">20/02/2025</span>
-                                </p>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-            </section>
         </div>
     </main>
 
     <!-- Rodapé -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section about">
-                    <h3>Sobre o ARG Flog</h3>
-                    <p>Um espaço para compartilhar o progresso e as experiências da nossa equipe durante o desenvolvimento de projetos.</p>
-                </div>
-                
-                <div class="footer-section links">
-                    <h3>Links Úteis</h3>
-                    <ul>
-                        <li><a href="sobre.html">Sobre Nós</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section team">
-                    <h3>Nossa Equipe</h3>
-                    <ul>
-                        <li><a href="ruan-perfil.html">Ruan</a></li>
-                        <li><a href="andre-perfil.html">André</a></li>
-                        <li><a href="igor-perfil.html">Igor</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 ARG Flog. Todos os direitos reservados.</p>
-            </div>
+            <p>&copy; 2025 ARG Flog. Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <!-- Navegação Mobile -->
-    <nav class="mobile-nav">
-        <a href="index.html">
-            <i class="fas fa-home" aria-hidden="true"></i>
-            <span class="sr-only">Início</span>
-        </a>
-        <a href="explorar.html">
-            <i class="fas fa-search" aria-hidden="true"></i>
-            <span class="sr-only">Explorar</span>
-        </a>
-        <a href="cadastro.html">
-            <i class="fas fa-plus-square" aria-hidden="true"></i>
-            <span class="sr-only">Nova Entrada</span>
-        </a>
-        <a href="perfil.html">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            <span class="sr-only">Perfil</span>
-        </a>
-    </nav>
 </body>
 </html>
