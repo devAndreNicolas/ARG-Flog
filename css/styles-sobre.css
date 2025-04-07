@@ -338,16 +338,16 @@
     .about-content {
         flex-direction: column;
     }
-    
+
     .about-image,
     .about-text {
         flex: 0 0 100%;
     }
-    
+
     .contact-content {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-info {
         margin-bottom: 40px;
     }
@@ -357,23 +357,23 @@
     .about-banner {
         padding: 60px 0;
     }
-    
+
     .about-title {
         font-size: 2rem;
     }
-    
+
     .about-slogan {
         font-size: 1.2rem;
     }
-    
+
     .section-title {
         font-size: 1.8rem;
     }
-    
+
     .contact-info {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-item {
         margin-bottom: 20px;
     }
@@ -383,19 +383,19 @@
     .about-banner {
         padding: 40px 0;
     }
-    
+
     .about-title {
         font-size: 1.8rem;
     }
-    
+
     .about-slogan {
         font-size: 1.1rem;
     }
-    
+
     .section-title {
         font-size: 1.5rem;
     }
-    
+
     .mission-grid {
         grid-template-columns: 1fr;
     }

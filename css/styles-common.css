@@ -15,6 +15,11 @@ body {
 a {
     text-decoration: none;
     color: #0066cc;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0055aa;
 }
 
 ul {
@@ -42,7 +47,13 @@ img {
     z-index: 100;
 }
 
-/* Logo e cabeçalho */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -80,13 +91,7 @@ img {
     color: #333;
 }
 
-/* Ajustes no cabeçalho */
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
+/* Navegação */
 .main-nav ul {
     display: flex;
     gap: 20px;
@@ -100,7 +105,8 @@ img {
     transition: background-color 0.3s;
 }
 
-.main-nav a:hover, .main-nav a.active {
+.main-nav a:hover,
+.main-nav a.active {
     background-color: #f0f0f0;
     color: #0066cc;
 }
@@ -168,7 +174,6 @@ img {
 
 .footer-section a {
     color: #ddd;
-    transition: color 0.3s;
 }
 
 .footer-section a:hover {
@@ -224,8 +229,11 @@ img {
     border-width: 0;
 }
 
-/* Foco visível para acessibilidade */
-a:focus, button:focus, input:focus, select:focus, textarea:focus {
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
     outline: 2px solid #0066cc;
     outline-offset: 2px;
 }
@@ -242,30 +250,30 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
     }
 }
 
-/* Responsividade comum */
+/* Responsividade */
 @media (max-width: 768px) {
     .header .container {
         flex-direction: column;
         padding: 15px 10px;
     }
-    
+
     .logo-container {
         margin-bottom: 15px;
         margin-right: 0;
     }
-    
+
     .main-nav ul {
         justify-content: center;
     }
-    
+
     .mobile-nav {
         display: flex;
     }
-    
+
     .main-content {
         margin-bottom: 60px;
     }
-    
+
     .mobile-only {
         display: block;
     }
@@ -276,15 +284,15 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
         width: 40px;
         height: 40px;
     }
-    
+
     .logo-text {
         font-size: 16px;
     }
-    
+
     .logo {
         font-size: 20px;
     }
-    
+
     .container {
         padding: 0 10px;
     }
