@@ -1,10 +1,24 @@
+/* Variáveis de cores */
+:root {
+    --primary-color: #0066cc;
+    --primary-hover: #0055aa;
+    --secondary-color: #333;
+    --background-light: #f8f9fa;
+    --border-color: #ddd;
+    --text-color: #333;
+    --text-light: #666;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --focus-shadow: rgba(0, 102, 204, 0.2);
+    --error-color: #e74c3c;
+}
+
 /* Estilos específicos para a página de perfil */
 
 /* Cabeçalho do perfil */
 .profile-header {
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px var(--shadow-color);
     padding: 40px;
     margin-bottom: 30px;
     display: flex;
@@ -23,7 +37,7 @@
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #fff;
-    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.2);
+    box-shadow: 0 4px 15px var(--focus-shadow);
     transition: transform 0.3s ease;
 }
 
@@ -39,17 +53,17 @@
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 5px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .profile-username {
-    color: #666;
+    color: var(--text-light);
     font-size: 16px;
     margin-bottom: 15px;
 }
 
 .profile-bio {
-    color: #555;
+    color: var(--text-light);
     line-height: 1.6;
     margin-bottom: 25px;
     max-width: 600px;
@@ -71,11 +85,11 @@
 .stat-value {
     font-size: 22px;
     font-weight: 700;
-    color: #333;
+    color: var(--text-color);
 }
 
 .stat-label {
-    color: #666;
+    color: var(--text-light);
     font-size: 14px;
     margin-top: 5px;
 }
@@ -94,33 +108,33 @@
 }
 
 .profile-actions .btn-primary {
-    background-color: #0066cc;
+    background-color: var(--primary-color);
     color: white;
     border: none;
 }
 
 .profile-actions .btn-primary:hover {
-    background-color: #0055aa;
+    background-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
+    box-shadow: 0 4px 10px var(--focus-shadow);
 }
 
 .profile-actions .btn-outline {
     background-color: transparent;
-    color: #333;
-    border: 1px solid #ddd;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
 }
 
 .profile-actions .btn-outline:hover {
-    background-color: #f5f5f5;
+    background-color: var(--background-light);
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px var(--shadow-color);
 }
 
 /* Abas do perfil */
 .profile-tabs {
     display: flex;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 30px;
     gap: 5px;
 }
@@ -128,7 +142,7 @@
 .profile-tab {
     padding: 15px 25px;
     font-weight: 600;
-    color: #666;
+    color: var(--text-light);
     background: none;
     border: none;
     border-bottom: 2px solid transparent;
@@ -139,12 +153,12 @@
 }
 
 .profile-tab:hover {
-    color: #333;
+    color: var(--text-color);
 }
 
 .profile-tab.active {
-    color: #0066cc;
-    border-bottom-color: #0066cc;
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
 }
 
 .profile-tab.active::after {
@@ -154,7 +168,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #0066cc;
+    background-color: var(--primary-color);
     animation: slideIn 0.3s ease forwards;
 }
 
@@ -184,14 +198,14 @@
     aspect-ratio: 1/1;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px var(--shadow-color);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-entry:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px var(--shadow-color);
 }
 
 .profile-entry img {

@@ -1,3 +1,16 @@
+/* Variáveis de cores */
+:root {
+    --primary-color: #0066cc;
+    --primary-hover: #0055aa;
+    --secondary-color: #333;
+    --background-light: #f8f9fa;
+    --border-color: #ddd;
+    --text-color: #333;
+    --text-light: #666;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --focus-color: #0095f6;
+}
+
 /* Layout principal */
 .main-container {
     display: grid;
@@ -42,9 +55,9 @@
 
 .filter-group select {
     padding: 8px 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
-    background-color: #fff;
+    background-color: var(--background-light);
 }
 
 /* Feed de entradas */
@@ -55,10 +68,10 @@
 }
 
 .feed-card {
-    background-color: #fff;
+    background-color: var(--background-light);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px var(--shadow-color);
     animation: fadeIn 0.5s ease forwards;
 }
 
@@ -94,13 +107,13 @@
 
 .post-date {
     font-size: 12px;
-    color: #8e8e8e;
+    color: var(--text-light);
 }
 
 .options-btn {
     background: none;
     border: none;
-    color: #262626;
+    color: var(--text-color);
     font-size: 16px;
     cursor: pointer;
     padding: 8px;
@@ -143,14 +156,14 @@
     background: none;
     border: none;
     font-size: 22px;
-    color: #262626;
+    color: var(--text-color);
     cursor: pointer;
     padding: 4px;
     transition: color 0.3s ease;
 }
 
 .action-btn:hover {
-    color: #8e8e8e;
+    color: var(--text-light);
 }
 
 .feed-likes {
@@ -178,7 +191,7 @@
 
 .view-comments {
     display: block;
-    color: #8e8e8e;
+    color: var(--text-light);
     margin-top: 4px;
     font-size: 14px;
 }
@@ -186,7 +199,7 @@
 .btn-read-more {
     display: inline-block;
     margin-bottom: 12px;
-    color: #0095f6;
+    color: var(--primary-color);
     font-weight: 600;
     font-size: 14px;
 }
@@ -194,7 +207,7 @@
 /* Adicionar comentário */
 .add-comment {
     display: flex;
-    border-top: 1px solid #efefef;
+    border-top: 1px solid var(--border-color);
     padding-top: 12px;
     margin-top: 8px;
 }
@@ -210,7 +223,7 @@
 .add-comment button {
     background: none;
     border: none;
-    color: #0095f6;
+    color: var(--primary-color);
     font-weight: 600;
     cursor: pointer;
     opacity: 0.7;
@@ -248,14 +261,15 @@
 }
 
 .sidebar-user-info p {
-    color: #8e8e8e;
+    color: var(--text-light);
     font-size: 14px;
 }
 
 .sidebar-link {
+    margin: 20px;
     font-size: 12px;
     font-weight: 600;
-    color: #0095f6;
+    color: var(--primary-color);
 }
 
 /* Sugestões */
@@ -285,14 +299,15 @@
 }
 
 .suggestion-info p {
-    color: #8e8e8e;
+    color: var(--text-light);
     font-size: 12px;
 }
 
 .follow-btn {
+    margin: 30px;
     font-size: 12px;
     font-weight: 600;
-    color: #0095f6;
+    color: var(--primary-color);
 }
 
 /* Paginação */
@@ -311,19 +326,19 @@
     height: 36px;
     padding: 0 10px;
     border-radius: 4px;
-    background-color: #fff;
-    color: #333;
+    background-color: var(--background-light);
+    color: var(--text-color);
     font-weight: 500;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px var(--shadow-color);
     transition: background-color 0.3s ease;
 }
 
 .pagination a:hover {
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
 }
 
 .pagination a.active {
-    background-color: #0066cc;
+    background-color: var(--primary-color);
     color: #fff;
 }
 
@@ -348,7 +363,7 @@
     .feed-card {
         border-radius: 0;
         box-shadow: none;
-        border-bottom: 1px solid #dbdbdb;
+        border-bottom: 1px solid var(--border-color);
     }
 
     .feed-entries {
